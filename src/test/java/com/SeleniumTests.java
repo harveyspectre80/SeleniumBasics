@@ -2,11 +2,13 @@ package com;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
+import java.nio.channels.Selector;
 import java.util.Date;
 
 public class SeleniumTests extends BaseClass {
@@ -20,7 +22,7 @@ public class SeleniumTests extends BaseClass {
     }
 
     @Test
-    public void name() throws InterruptedException
+    public void Login() throws InterruptedException
     {
         driver.get("https://www.facebook.com/");
         WebElement unTB = driver.findElement(By.id("email"));
@@ -95,5 +97,20 @@ public class SeleniumTests extends BaseClass {
         r.keyRelease(KeyEvent.VK_W);
         Thread.sleep(3000);
         driver.close();
+    }
+
+    @Test
+    public void LoginWith_XpathAndCssSelector() throws InterruptedException {
+        driver.get("https://twitter.com");
+        WebElement Login = driver.findElement(By.xpath("//*[@id=\"doc\"]/div/div[1]/div[1]/div[2]/div[2]/div/a[2]"));
+        Login.click();
+        driver.get("https://twitter.com/login");
+        WebElement emailid = driver.findElement(By.xpath("//*[@id=\"page-container\"]/div/div[1]/form/fieldset/div[1]/input"));
+        emailid.sendKeys("meghshah50@yahoo.com");
+        WebElement pass = driver.findElement(By.cssSelector("#page-container > div > div.signin-wrapper > form > fieldset > div:nth-child(3) > input"));
+        pass.sendKeys("787898");
+        WebElement login1 = driver.findElement(By.xpath("//*[@id=\"page-container\"]/div/div[1]/form/div[2]/button"));
+        login1.click();
+        driver.get("https://facebook.com/");
     }
 }
