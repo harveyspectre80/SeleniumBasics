@@ -2,14 +2,13 @@ package com;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
-import java.nio.channels.Selector;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 public class SeleniumTests extends BaseClass {
 
@@ -48,11 +47,10 @@ public class SeleniumTests extends BaseClass {
         driver.navigate().forward();
         Thread.sleep(3000);
         driver.navigate().refresh();
-        driver.close();
     }
 
     @Test
-    public void CaptureScreenshot_ActiTIMEPage() throws IOException {
+    public void captureScreenshot() throws IOException {
         driver.manage().window().maximize();
         Date d = new Date();
         String date1 = d.toString();
@@ -63,9 +61,8 @@ public class SeleniumTests extends BaseClass {
         TakesScreenshot ts = (TakesScreenshot) driver;
         File srcFile = ts.getScreenshotAs(OutputType.FILE);
         File destFile = new File(".\\screenshot\\" + date2 + "__actiTIMELoginPage.png");
-        FileUtils.copyFile(srcFile, new File("/home/admin1/selenium1/src/test/resources/scrrenshot/screenshot.jpg"));
+        FileUtils.copyFile(srcFile, new File("/home/admin1/selenium1/src/test/resources/scrrenshot/captureScreenshot.jpg" + date2));
         System.out.println(Exception.class);
-        driver.close();
     }
 
     @Test
@@ -77,14 +74,12 @@ public class SeleniumTests extends BaseClass {
         System.out.println("the URL of the page is:"+ currentUrl);
         String pageSource = driver.getPageSource();
         System.out.println("the source code of the page is"+ pageSource);
-        driver.close();
     }
 
     @Test
     public void keyboard_Mouse_Operationsthrows()throws InterruptedException, AWTException
     {
         driver.get("https://www.google.com");
-        driver.manage().window().maximize();
         Thread.sleep(5000);
         Robot r = new Robot();
         r.mouseMove(300, 500);
@@ -96,21 +91,23 @@ public class SeleniumTests extends BaseClass {
         r.keyPress(KeyEvent.VK_W);
         r.keyRelease(KeyEvent.VK_W);
         Thread.sleep(3000);
-        driver.close();
     }
 
     @Test
     public void LoginWith_XpathAndCssSelector() throws InterruptedException {
-        driver.get("https://twitter.com");
-        WebElement Login = driver.findElement(By.xpath("//*[@id=\"doc\"]/div/div[1]/div[1]/div[2]/div[2]/div/a[2]"));
-        Login.click();
         driver.get("https://twitter.com/login");
+        Thread.sleep(500);
         WebElement emailid = driver.findElement(By.xpath("//*[@id=\"page-container\"]/div/div[1]/form/fieldset/div[1]/input"));
         emailid.sendKeys("meghshah50@yahoo.com");
-        WebElement pass = driver.findElement(By.cssSelector("#page-container > div > div.signin-wrapper > form > fieldset > div:nth-child(3) > input"));
+        WebElement pass = driver.findElement(By.xpath("//*[@id=\"page-container\"]/div/div[1]/form/fieldset/div[2]/input"));
         pass.sendKeys("787898");
         WebElement login1 = driver.findElement(By.xpath("//*[@id=\"page-container\"]/div/div[1]/form/div[2]/button"));
         login1.click();
-        driver.get("https://facebook.com/");
+        driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
+        WebElement moreOptions = driver.findElement(By.xpath("//span[contains(text(),'More')]"));
+        moreOptions.click();
+        Thread.sleep(3000);
+        WebElement Logout = driver.findElement(By.xpath("//span[contains(text(),'Log out')]"));
+        Logout.click();
     }
 }
