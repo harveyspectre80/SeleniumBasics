@@ -14,7 +14,6 @@ public class BaseClass {
         System.setProperty("webdriver.chrome.driver", "chromedriver");
          driver = new ChromeDriver();
         driver.manage().window().maximize();
-
     }
 
     @AfterMethod

@@ -1,13 +1,19 @@
 package com;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.ss.formula.functions.T;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class SeleniumTests extends BaseClass {
@@ -95,7 +101,9 @@ public class SeleniumTests extends BaseClass {
 
     @Test
     public void LoginWith_XpathAndCssSelector() throws InterruptedException {
-        driver.get("https://twitter.com/login");
+        driver.get("https://twitter.com");
+        WebElement Login = driver.findElement(By.xpath("//*[@id=\"doc\"]/div/div[1]/div[1]/div[2]/div[2]/div/a[2]"));
+        Login.click();
         Thread.sleep(500);
         WebElement emailid = driver.findElement(By.xpath("//*[@id=\"page-container\"]/div/div[1]/form/fieldset/div[1]/input"));
         emailid.sendKeys("meghshah50@yahoo.com");
@@ -109,5 +117,34 @@ public class SeleniumTests extends BaseClass {
         Thread.sleep(3000);
         WebElement Logout = driver.findElement(By.xpath("//span[contains(text(),'Log out')]"));
         Logout.click();
+    }
+
+    @Test
+    public void facebookLoginTest() throws InterruptedException, AWTException {
+        Map<String, Object> prefs = new HashMap<String, Object>();
+        prefs.put("profile.default_content_setting_values.notifications", 2);
+        ChromeOptions options = new ChromeOptions();
+        options.setExperimentalOption("prefs", prefs);
+        WebDriver driver = new ChromeDriver(options);
+
+        driver.get("https://www.facebook.com");
+        WebElement email = driver.findElement(By.xpath("//*[@id=\"email\"]"));
+        email.sendKeys("meghshah50@yahoo.com");
+        WebElement pass = driver.findElement(By.xpath("//*[@id=\"pass\"]"));
+        pass.sendKeys("787898");
+        WebElement login = driver.findElement(By.xpath("//input[@value='Log In']"));
+        login.click();
+        Thread.sleep(4000);
+
+        WebElement dragDownButton = driver.findElement(By.xpath("//div[@id='userNavigationLabel']"));
+        dragDownButton.click();
+        Thread.sleep(2000);
+        Robot r = new Robot();
+        r.mouseMove(1128, 225);
+        Thread.sleep(2000);
+        Actions actions = new Actions(driver);
+        WebElement elementLocator = driver.findElement(By.xpath("//li[@data-gt='{\"ref\":\"async_menu\",\"logout_menu_click\":\"menu_logout\"}']"));
+        actions.contextClick(elementLocator).perform();
+        //driver.findElement(By.xpath("//li[@data-gt='{\"ref\":\"async_menu\",\"logout_menu_click\":\"menu_logout\"}']")).click();
     }
 }
