@@ -12,7 +12,7 @@ import java.util.Iterator;
 
 public class ReadFromExcelFile extends BaseClass {
 
-    private static final String FILE_NAME = "/home/admin1/selenium1/src/test/resources/Excel/Abc.xlsx";
+    private static final String FILE_NAME = "/home/admin1/Desktop/Hemil-linux/SeleniumBasics/src/test/resources/Excel/Abc.xlsx";
 
     @Test
     public void test() {
