@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.SeleniumTests" tests="9" skipped="8" failures="1" errors="0" timestamp="2020-02-07T06:20:19" hostname="admin1-HP-EliteBook-Folio-9480m" time="0.767">
+<testsuite name="com.ReadFromExcelFile" tests="2" skipped="1" failures="1" errors="0" timestamp="2020-02-07T06:20:18" hostname="admin1-HP-EliteBook-Folio-9480m" time="1.148">
   <properties/>
-  <testcase name="Before" classname="com.SeleniumTests" time="0.756">
-    <failure message="org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 77&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'admin1-HP-EliteBook-Folio-9480m', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.15.0-72-generic', java.version: '11.0.5'&#10;Driver info: driver.version: ChromeDriver&#10;remote stacktrace: #0 0x55ae30621959 &lt;unknown&gt;&#10;" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 77
+  <testcase name="Before" classname="com.ReadFromExcelFile" time="1.141">
+    <failure message="org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 77&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'admin1-HP-EliteBook-Folio-9480m', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.15.0-72-generic', java.version: '11.0.5'&#10;Driver info: driver.version: ChromeDriver&#10;remote stacktrace: #0 0x55bfdd994959 &lt;unknown&gt;&#10;" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 77
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'admin1-HP-EliteBook-Folio-9480m', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.15.0-72-generic', java.version: '11.0.5'
 Driver info: driver.version: ChromeDriver
-remote stacktrace: #0 0x55ae30621959 &lt;unknown&gt;
+remote stacktrace: #0 0x55bfdd994959 &lt;unknown&gt;
 
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -94,32 +94,11 @@ remote stacktrace: #0 0x55ae30621959 &lt;unknown&gt;
 	at java.base/java.lang.Thread.run(Thread.java:834)
 </failure>
   </testcase>
-  <testcase name="BrowserNavigationExample" classname="com.SeleniumTests" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="Login" classname="com.SeleniumTests" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="LoginWith_XpathAndCssSelector" classname="com.SeleniumTests" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="UpcastingToWebDriver_LaunchBroser1" classname="com.SeleniumTests" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="captureScreenshot" classname="com.SeleniumTests" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="facebookLoginTest" classname="com.SeleniumTests" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="keyboard_Mouse_Operationsthrows" classname="com.SeleniumTests" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="seleniumTest" classname="com.SeleniumTests" time="0.0">
+  <testcase name="test" classname="com.ReadFromExcelFile" time="0.0">
     <skipped/>
   </testcase>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}) on port 16590
+  <system-err><![CDATA[Starting ChromeDriver 77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}) on port 5050
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
 ]]></system-err>

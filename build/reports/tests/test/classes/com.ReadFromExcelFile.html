@@ -1,12 +1,86 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.SeleniumTests" tests="9" skipped="8" failures="1" errors="0" timestamp="2020-02-07T06:20:19" hostname="admin1-HP-EliteBook-Folio-9480m" time="0.767">
-  <properties/>
-  <testcase name="Before" classname="com.SeleniumTests" time="0.756">
-    <failure message="org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 77&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'admin1-HP-EliteBook-Folio-9480m', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.15.0-72-generic', java.version: '11.0.5'&#10;Driver info: driver.version: ChromeDriver&#10;remote stacktrace: #0 0x55ae30621959 &lt;unknown&gt;&#10;" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 77
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.ReadFromExcelFile</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.ReadFromExcelFile</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.html">com</a> &gt; ReadFromExcelFile</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">1</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.141s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="Before"></a>
+<h3 class="failures">Before</h3>
+<span class="code">
+<pre>org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 77
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'admin1-HP-EliteBook-Folio-9480m', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.15.0-72-generic', java.version: '11.0.5'
 Driver info: driver.version: ChromeDriver
-remote stacktrace: #0 0x55ae30621959 &lt;unknown&gt;
+remote stacktrace: #0 0x55bfdd994959 &lt;unknown&gt;
 
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -92,35 +166,51 @@ remote stacktrace: #0 0x55ae30621959 &lt;unknown&gt;
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-</failure>
-  </testcase>
-  <testcase name="BrowserNavigationExample" classname="com.SeleniumTests" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="Login" classname="com.SeleniumTests" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="LoginWith_XpathAndCssSelector" classname="com.SeleniumTests" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="UpcastingToWebDriver_LaunchBroser1" classname="com.SeleniumTests" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="captureScreenshot" classname="com.SeleniumTests" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="facebookLoginTest" classname="com.SeleniumTests" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="keyboard_Mouse_Operationsthrows" classname="com.SeleniumTests" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="seleniumTest" classname="com.SeleniumTests" time="0.0">
-    <skipped/>
-  </testcase>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}) on port 16590
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">Before</td>
+<td>1.141s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="skipped">test</td>
+<td>-</td>
+<td class="skipped">ignored</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Starting ChromeDriver 77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}) on port 5050
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-]]></system-err>
-</testsuite>
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 4.4.1</a> at 07-Feb-2020, 11:50:21 AM</p>
+</div>
+</div>
+</body>
+</html>
